@@ -1,0 +1,17 @@
+{{# multiple? }}
+	<fieldset>
+{{/ multiple? }}
+{{# list }}
+	{{# description_before }}
+		<p><span class="description">{{ text }}</span></p>
+	{{/ description_before }}
+	{{# choices }}
+		<p>{{> checkbox }}</p>
+	{{/ choices }}
+	{{# description_after }}
+		<p><span class="description">{{ text }}</span></p>
+	{{/ description_after }}
+{{/ list }}
+{{# multiple? }}
+	</fieldset>
+{{/ multiple? }}

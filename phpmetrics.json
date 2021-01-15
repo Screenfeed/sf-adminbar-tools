@@ -1,0 +1,14 @@
+{
+	"includes": [
+		"."
+	],
+	"exclude": [
+		"src/classes/Dependencies",
+		"src/classmap/dependencies",
+		"vendor"
+	],
+	"report": {
+		"html": "report"
+	},
+	"extensions": [ "php" ]
+}

@@ -1,0 +1,20 @@
+{
+	"name": "sf-adminbar-tools",
+	"description": "WordPress plugin to add some development tools.",
+	"version": "4.0.0",
+	"homepage": "https://github.com/Screenfeed/sf-adminbar-tools",
+	"license": "GPL-2.0",
+	"private": true,
+	"author": {
+		"name": "Grégory Viguier",
+		"url": "https://www.screenfeed.fr/"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.8.6",
+		"grunt": "^1.2.0",
+		"grunt-contrib-cssmin": "^3.0.0",
+		"grunt-contrib-uglify": "^5.0.0",
+		"grunt-eslint": "^20.0.0",
+		"grunt-postcss": "^0.9.0"
+	}
+}

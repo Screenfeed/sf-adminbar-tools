@@ -1,0 +1,91 @@
+{
+	"name": "screenfeed/sf-adminbar-tools",
+	"description": "WordPress plugin to add some development tools.",
+	"keywords": [
+		"wordpress",
+		"dev-tool"
+	],
+	"homepage": "https://github.com/Screenfeed/sf-adminbar-tools",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Grégory Viguier",
+			"role": "Developer"
+		}
+	],
+	"type": "wordpress-plugin",
+	"config": {
+		"classloader-suffix": "ScreenfeedAdminbarTools",
+		"sort-packages": true
+	},
+	"support": {
+		"issues": "https://github.com/Screenfeed/sf-adminbar-tools/issues",
+		"source": "https://github.com/Screenfeed/sf-adminbar-tools"
+	},
+	"require": {
+		"php": ">=5.6.0",
+		"composer/installers": "~1.0",
+		"league/container": "^2.4",
+		"mustache/mustache": "^2.13",
+		"screenfeed/autowpoptions": "^1.0"
+	},
+	"require-dev": {
+		"php": "^7.2",
+		"automattic/phpcs-neutron-standard": "*",
+		"coenjacobs/mozart": "0.6.0-beta-3",
+		"dangoodman/composer-for-wordpress": "^2.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"phpmetrics/phpmetrics": "*",
+		"roave/security-advisories": "dev-master",
+		"squizlabs/php_codesniffer": ">= 3.3.0",
+		"szepeviktor/phpstan-wordpress": "*",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Screenfeed\\AdminbarTools\\": "src/classes/"
+		},
+		"classmap": [
+			"src/classmap"
+		]
+	},
+	"extra": {
+		"mozart": {
+			"dep_namespace": "Screenfeed\\AdminbarTools\\Dependencies\\",
+			"dep_directory": "/src/classes/Dependencies/",
+			"classmap_directory": "/src/classmap/dependencies/",
+			"classmap_prefix": "ScreenfeedAdminbarTools_",
+			"override_autoload": {
+				"mustache/mustache": {
+					"classmap": [
+						"src/"
+					]
+				}
+			}
+		}
+	},
+	"scripts": {
+		"cs-all":"\"vendor/bin/phpcs\"",
+		"cs-52": "\"vendor/bin/phpcs\" -p --colors --standard=PHPCompatibility --runtime-set testVersion 5.2- \"sf-adminbar-tools.php\" \"src/class-sfabt-requirements-check.php\"",
+		"cs": [
+			"@cs-52",
+			"@cs-all"
+		],
+		"stan": "\"vendor/bin/phpstan\" analyze --memory-limit=300M",
+		"metrics": "\"vendor/bin/phpmetrics\" --config=phpmetrics.json",
+		"lints": [
+			"@cs",
+			"@stan",
+			"@metrics"
+		],
+		"post-install-cmd": [
+			"\"vendor/bin/mozart\" compose",
+			"composer dump-autoload"
+		],
+		"post-update-cmd": [
+			"\"vendor/bin/mozart\" compose",
+			"composer dump-autoload"
+		]
+	}
+}

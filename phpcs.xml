@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ruleset name="SF Admin Bar Tools">
+	<description>SF Admin Bar Tools' coding standard.</description>
+
+	<!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
+	<file>.</file>
+	<exclude-pattern>/src/classes/Dependencies/*</exclude-pattern>
+	<exclude-pattern>/src/classmap/dependencies/*</exclude-pattern>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+
+	<arg value="p"/><!-- Shows progress. -->
+	<arg name="colors"/><!-- Shows results with colors. -->
+	<arg name="parallel" value="50"/><!-- Enables parallel processing when available for faster results. -->
+	<arg name="extensions" value="php"/><!-- Limits to PHP files. -->
+
+	<!-- Run against the PHPCompatibility ruleset: PHP 5.6 and higher + WP 4.7 and higher. -->
+	<!-- https://github.com/PHPCompatibility/PHPCompatibilityWP -->
+	<rule ref="PHPCompatibility"/>
+	<config name="testVersion" value="5.6-"/>
+	<config name="minimum_supported_wp_version" value="4.7"/>
+
+	<!-- Run against custom rules. -->
+	<rule ref="Generic.Arrays.ArrayIndent"/>
+	<rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+	<rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+	<rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
+	<rule ref="PEAR.Commenting.FileComment.MissingVersion"/>
+	<rule ref="PEAR.Functions.FunctionDeclaration.SpaceAfterFunction"/>
+	<rule ref="Squiz.Commenting.FunctionComment.InvalidReturnVoid"/>
+	<rule ref="Squiz.Commenting.LongConditionClosingComment.Missing"/>
+	<rule ref="Squiz.ControlStructures.SwitchDeclaration.MissingDefault"/>
+	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/>
+	<rule ref="Squiz.PHP.GlobalKeyword.NotAllowed"/>
+	<rule ref="Squiz.WhiteSpace.ControlStructureSpacing.NoLineAfterClose"/>
+
+	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+		<exclude-pattern>src/class-sfabt-requirements-check.php</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Classes.ClassFileName.NoMatch">
+		<exclude-pattern>src/class-sfabt-requirements-check.php</exclude-pattern>
+	</rule>
+
+	<!-- Run against WordPress ruleset. -->
+	<!-- https://github.com/WordPress/WordPress-Coding-Standards -->
+	<rule ref="WordPress">
+		<exclude name="Squiz.PHP.CommentedOutCode.Found"/>
+	</rule>
+
+	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
+		<exclude-pattern>tests\.php</exclude-pattern>
+		<exclude-pattern>uninstall\.php</exclude-pattern>
+		<exclude-pattern>src/classes/*</exclude-pattern>
+		<exclude-pattern>src/functions/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>src/classes/</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<exclude-pattern>src/classes/</exclude-pattern>
+	</rule>
+
+	<!-- Run against the NeutronStandard ruleset. -->
+	<!-- https://github.com/Automattic/phpcs-neutron-standard -->
+	<rule ref="NeutronStandard">
+		<exclude name="NeutronStandard.AssignAlign.DisallowAssignAlign.Aligned"/>
+		<exclude name="NeutronStandard.Functions.DisallowCallUserFunc.CallUserFunc"/>
+		<exclude name="NeutronStandard.Functions.LongFunction.LongFunction"/>
+		<exclude name="NeutronStandard.Functions.TypeHint.NoArgumentType"/>
+		<exclude name="NeutronStandard.Functions.TypeHint.NoReturnType"/>
+		<exclude name="NeutronStandard.StrictTypes.RequireStrictTypes.StrictTypes"/>
+	</rule>
+
+	<rule ref="NeutronStandard.Arrays.DisallowLongformArray.LongformArray">
+		<exclude-pattern>sf-adminbar-tools.php</exclude-pattern>
+		<exclude-pattern>src/class-sfabt-requirements-check.php</exclude-pattern>
+	</rule>
+	<rule ref="NeutronStandard.Constants.DisallowDefine.Define">
+		<exclude-pattern>sf-adminbar-tools.php</exclude-pattern>
+	</rule>
+	<rule ref="NeutronStandard.Globals.DisallowGlobalFunctions.GlobalFunctions">
+		<exclude-pattern>sf-adminbar-tools.php</exclude-pattern>
+	</rule>
+</ruleset>

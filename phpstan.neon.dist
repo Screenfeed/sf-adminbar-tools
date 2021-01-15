@@ -1,0 +1,27 @@
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: max
+    paths:
+        - %currentWorkingDirectory%
+    scanFiles:
+        - src/class-sfabt-requirements-check.php
+        - sf-adminbar-tools.php
+        - tests.php
+        - uninstall.php
+    scanDirectories:
+        - src/functions/
+    excludes_analyse:
+        - .git/*
+        - assets/*
+        - bin/*
+        - languages/*
+        - report/*
+        - src/classes/Dependencies/*
+        - src/classmap/dependencies/*
+        - Tests/*
+        - vendor/*
+        - views/*
+    ignoreErrors:
+        - '#^Function apply_filters(_ref_array)? invoked with \d parameters, \d required\.$#'

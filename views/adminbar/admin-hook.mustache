@@ -1,0 +1,14 @@
+<span class="action-indic">
+	{{# count? }}
+		<span class="action-count">{{ . }}</span>
+	{{/ count? }}
+	{{^ count? }}
+		<span class="action-count">{{> adminbar/late-adjust-wrap }}</span>
+	{{/ count? }}
+</span>
+{{# params? }}
+	<span class="action-indic" title="{{{ title }}}{{! Must be escaped with esc_attr(). }}">
+		<span class="action-count">P</span>
+	</span>
+{{/ params? }}
+<input class="no-adminbar-style" type="text" style="min-width:{{{ min_width }}}{{! Must be an integer. }}ch" readonly="readonly" autocomplete="off" value="{{{ hook_name_value }}}{{! Must be escaped with esc_attr(). }}"{{{ atts }}}/>

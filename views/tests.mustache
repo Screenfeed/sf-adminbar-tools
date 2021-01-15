@@ -1,0 +1,10 @@
+<div class="wrap">
+	<h1>{{ title }}</h1>
+	{{# message? }}
+		<p>{{{ html }}}{{! Must be escaped with wp_kses(). }}</p>
+	{{/ message? }}
+	{{# code_non_pre? }}
+		<pre>{{ code }}</pre>
+	{{/ code_non_pre? }}
+	{{{ code_pre }}}{{! Must be escaped with wp_kses(). }}
+</div>

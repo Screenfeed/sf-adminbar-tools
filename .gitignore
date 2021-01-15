@@ -1,0 +1,11 @@
+# Directories
+.vscode
+node_modules
+report
+vendor
+
+# Files
+*.log
+.DS_Store*
+composer.lock
+Thumbs.db

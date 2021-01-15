@@ -1,0 +1,14 @@
+{{ relative_path }}
+{{# path_description? }}
+<span class="sfabt-template-position">({{ text }})</span>
+{{/ path_description? }}
+{{# template_args? }}
+<span class="action-indic" title="{{{ label }}}{{! Must be escaped with esc_attr(). }}&#10;{{{ code }}}{{! Must be escaped with esc_attr(). }}">
+	<span class="action-count">P</span>
+</span>
+{{/ template_args? }}
+{{# counter? }}
+<span class="action-indic">
+	<span class="action-count">{{ total_count }}</span>
+</span>
+{{/ counter? }}
