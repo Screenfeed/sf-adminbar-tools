@@ -61,6 +61,7 @@ None, yet.
 * About the lightbox displaying the value of `$wp_query`: this lightbow is now also used to display a user's data on a user's profile page (admin area). This lightbox can be filtered/extended to display anything you want in frontend or admin.
 * A new menu item "Code Tester" to test your code rapidly.
 * Improvement: this tool being displayed in the admin bar, some values were inaccurate or incomplete (everything happening after the admin bar wasn't taken into account). This has been fixed for the number of requests, page load time, admin hooks, and memory usage.
+* Fix: the plugin forces the admin bar to be printed at the bottom of the page on frontend, instead of using the new hook `wp_body_open`. This is done to be able to list all template parts.
 * The plugin is now using a template loader that can be filtered to customize the way everything is displayed.
 
 = 3.0.4 =
