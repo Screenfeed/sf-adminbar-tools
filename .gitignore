@@ -8,4 +8,5 @@ vendor
 *.log
 .DS_Store*
 composer.lock
+gruntlocalconf.json
 Thumbs.db

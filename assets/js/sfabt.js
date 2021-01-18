@@ -1,12 +1,12 @@
-(function($, d, w, undefined) { // eslint-disable-line no-unused-vars, no-shadow, no-shadow-restricted-names
+(function($, d, w, undefined) { // eslint-disable-line no-unused-vars, no-shadow-restricted-names
 
 	if ( ! w.console || ! w.console.log ) {
 		// Polyfill for console.
 		(function() {
 			var noop    = function() {},
 				methods = [ "assert", "clear", "count", "debug", "dir", "dirxml", "error", "exception", "group", "groupCollapsed", "groupEnd", "info", "log", "markTimeline", "profile", "profileEnd", "markTimeline", "table", "time", "timeEnd", "timeStamp", "trace", "warn" ],
-				length  = methods.length, // eslint-disable-line no-shadow
-				console = w.console = {}; // eslint-disable-line no-shadow
+				length  = methods.length,
+				console = w.console = {};
 			while ( length-- ) {
 				console[ methods[ length ] ] = noop;
 			}
@@ -40,7 +40,7 @@
 		 *
 		 * @param {mixed} Code The thing to log.
 		 */
-		log: function ( code ) { // eslint-disable-line no-unused-vars
+		log: function ( code ) {
 			if ( w.sfabtContext.debug ) {
 				w.console.log( code );
 			}
@@ -108,7 +108,7 @@
 			}
 
 			$.get( pageUrl + sep + "_wpnonce=" + w.sfabtContext.queryNonce + "&sfabt-var=" + globalVar )
-				.always( function ( data, status, jqXHR ) { // eslint-disable-line no-shadow
+				.always( function ( data, status, jqXHR ) {
 					var html     = "",
 						dataType = typeof data;
 
