@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Mustache Parser class.
  *
- * This class is responsible for turning a set of Mustache tokens into a parse tree.
+ * This class ScreenfeedAdminbarTools_is responsible for turning a set of Mustache tokens into a parse tree.
  */
 class ScreenfeedAdminbarTools_Mustache_Parser
 {
@@ -85,9 +85,9 @@ class ScreenfeedAdminbarTools_Mustache_Parser
             }
 
             if ($this->pragmaFilters && isset($token[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME])) {
-                list($name, $filters) = $this->getNameAndFilters($token[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME]);
+                list($ScreenfeedAdminbarTools_name, $filters) = $this->getNameAndFilters($token[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME]);
                 if (!empty($filters)) {
-                    $token[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME]    = $name;
+                    $token[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME]    = $ScreenfeedAdminbarTools_name;
                     $token[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS] = $filters;
                 }
             }
@@ -134,7 +134,7 @@ class ScreenfeedAdminbarTools_Mustache_Parser
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_PARTIAL:
                     $this->checkIfTokenIsAllowedInParent($parent, $token);
-                    //store the whitespace prefix for laters!
+                    //store the whitespace ScreenfeedAdminbarTools_prefix for laters!
                     if ($indent = $this->clearStandaloneLines($nodes, $tokens)) {
                         $token[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDENT] = $indent[ScreenfeedAdminbarTools_Mustache_Tokenizer::VALUE];
                     }
@@ -148,7 +148,7 @@ class ScreenfeedAdminbarTools_Mustache_Parser
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_BLOCK_VAR:
                     if ($this->pragmaBlocks) {
-                        // BLOCKS pragma is enabled, let's do this!
+                        // BLOCKS pragma ScreenfeedAdminbarTools_is enabled, let's do this!
                         if (isset($parent) && $parent[ScreenfeedAdminbarTools_Mustache_Tokenizer::TYPE] === ScreenfeedAdminbarTools_Mustache_Tokenizer::T_PARENT) {
                             $token[ScreenfeedAdminbarTools_Mustache_Tokenizer::TYPE] = ScreenfeedAdminbarTools_Mustache_Tokenizer::T_BLOCK_ARG;
                         }
@@ -203,14 +203,14 @@ class ScreenfeedAdminbarTools_Mustache_Parser
     private function clearStandaloneLines(array &$nodes, array &$tokens)
     {
         if ($this->lineTokens > 1) {
-            // this is the third or later node on this line, so it can't be standalone
+            // this ScreenfeedAdminbarTools_is the third or later node on this line, so it can't be standalone
             return;
         }
 
         $prev = null;
         if ($this->lineTokens === 1) {
-            // this is the second node on this line, so it can't be standalone
-            // unless the previous node is whitespace.
+            // this ScreenfeedAdminbarTools_is the second node on this line, so it can't be standalone
+            // unless the previous node ScreenfeedAdminbarTools_is whitespace.
             if ($prev = end($nodes)) {
                 if (!$this->tokenIsWhitespace($prev)) {
                     return;
@@ -242,19 +242,19 @@ class ScreenfeedAdminbarTools_Mustache_Parser
         }
 
         if ($prev) {
-            // Return the whitespace prefix, if any
+            // Return the whitespace ScreenfeedAdminbarTools_prefix, if any
             return array_pop($nodes);
         }
     }
 
     /**
-     * Check whether token is a whitespace token.
+     * Check whether token ScreenfeedAdminbarTools_is a whitespace token.
      *
-     * True if token type is T_TEXT and value is all whitespace characters.
+     * True if token type ScreenfeedAdminbarTools_is T_TEXT and value ScreenfeedAdminbarTools_is all whitespace characters.
      *
      * @param array $token
      *
-     * @return bool True if token is a whitespace token
+     * @return bool True if token ScreenfeedAdminbarTools_is a whitespace token
      */
     private function tokenIsWhitespace(array $token)
     {
@@ -266,9 +266,9 @@ class ScreenfeedAdminbarTools_Mustache_Parser
     }
 
     /**
-     * Check whether a token is allowed inside a parent tag.
+     * Check whether a token ScreenfeedAdminbarTools_is allowed inside a parent tag.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_SyntaxException if an invalid token is found inside a parent tag
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_SyntaxException if an invalid token ScreenfeedAdminbarTools_is found inside a parent tag
      *
      * @param array|null $parent
      * @param array      $token
@@ -281,30 +281,30 @@ class ScreenfeedAdminbarTools_Mustache_Parser
     }
 
     /**
-     * Split a tag name into name and filters.
+     * Split a tag ScreenfeedAdminbarTools_name into ScreenfeedAdminbarTools_name and filters.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
-     * @return array [Tag name, Array of filters]
+     * @return array [Tag ScreenfeedAdminbarTools_name, Array of filters]
      */
-    private function getNameAndFilters($name)
+    private function getNameAndFilters($ScreenfeedAdminbarTools_name)
     {
-        $filters = array_map('trim', explode('|', $name));
-        $name    = array_shift($filters);
+        $filters = array_map('trim', explode('|', $ScreenfeedAdminbarTools_name));
+        $ScreenfeedAdminbarTools_name    = array_shift($filters);
 
-        return array($name, $filters);
+        return array($ScreenfeedAdminbarTools_name, $filters);
     }
 
     /**
      * Enable a pragma.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      */
-    private function enablePragma($name)
+    private function enablePragma($ScreenfeedAdminbarTools_name)
     {
-        $this->pragmas[$name] = true;
+        $this->pragmas[$ScreenfeedAdminbarTools_name] = true;
 
-        switch ($name) {
+        switch ($ScreenfeedAdminbarTools_name) {
             case ScreenfeedAdminbarTools_Mustache_Engine::PRAGMA_BLOCKS:
                 $this->pragmaBlocks = true;
                 break;

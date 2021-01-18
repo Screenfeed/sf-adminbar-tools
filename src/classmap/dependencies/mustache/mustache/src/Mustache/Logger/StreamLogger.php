@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -36,10 +36,10 @@ class ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger extends ScreenfeedAdm
     protected $url    = null;
 
     /**
-     * @throws InvalidArgumentException if the logging level is unknown
+     * @throws InvalidArgumentException if the logging level ScreenfeedAdminbarTools_is unknown
      *
      * @param resource|string $stream Resource instance or URL
-     * @param int             $level  The minimum logging level at which this handler will be triggered
+     * @param int             $level  The minimum logging level ScreenfeedAdminbarTools_at which this handler will be triggered
      */
     public function __construct($stream, $level = ScreenfeedAdminbarTools_Mustache_Logger::ERROR)
     {
@@ -65,7 +65,7 @@ class ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger extends ScreenfeedAdm
     /**
      * Set the minimum logging level.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if the logging level is unknown
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if the logging level ScreenfeedAdminbarTools_is unknown
      *
      * @param int $level The minimum logging level which will be written
      */
@@ -91,7 +91,7 @@ class ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger extends ScreenfeedAdm
     /**
      * Logs with an arbitrary level.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if the logging level is unknown
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if the logging level ScreenfeedAdminbarTools_is unknown
      *
      * @param mixed  $level
      * @param string $message
@@ -111,7 +111,7 @@ class ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger extends ScreenfeedAdm
     /**
      * Write a record to the log.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_LogicException   If neither a stream resource nor url is present
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_LogicException   If neither a stream resource nor url ScreenfeedAdminbarTools_is present
      * @throws ScreenfeedAdminbarTools_Mustache_Exception_RuntimeException If the stream url cannot be opened
      *
      * @param int    $level   The logging level
@@ -137,9 +137,9 @@ class ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger extends ScreenfeedAdm
     }
 
     /**
-     * Gets the name of the logging level.
+     * Gets the ScreenfeedAdminbarTools_name of the logging level.
      *
-     * @throws InvalidArgumentException if the logging level is unknown
+     * @throws InvalidArgumentException if the logging level ScreenfeedAdminbarTools_is unknown
      *
      * @param int $level
      *

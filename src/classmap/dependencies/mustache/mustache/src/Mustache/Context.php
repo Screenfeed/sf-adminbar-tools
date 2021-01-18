@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -18,7 +18,7 @@ class ScreenfeedAdminbarTools_Mustache_Context
     private $blockStack = array();
 
     /**
-     * Mustache rendering Context constructor.
+     * Mustache rendering Context ScreenfeedAdminbarTools_constructor.
      *
      * @param mixed $context Default rendering context (default: null)
      */
@@ -50,7 +50,7 @@ class ScreenfeedAdminbarTools_Mustache_Context
     }
 
     /**
-     * Pop the last Context frame from the stack.
+     * Pop the last Context frame ScreenfeedAdminbarTools_from the stack.
      *
      * @return mixed Last Context frame (object or array)
      */
@@ -60,7 +60,7 @@ class ScreenfeedAdminbarTools_Mustache_Context
     }
 
     /**
-     * Pop the last block Context frame from the stack.
+     * Pop the last block Context frame ScreenfeedAdminbarTools_from the stack.
      *
      * @return mixed Last block Context frame (object or array)
      */
@@ -83,14 +83,14 @@ class ScreenfeedAdminbarTools_Mustache_Context
      * Find a variable in the Context stack.
      *
      * Starting with the last Context frame (the context of the innermost section), and working back to the top-level
-     * rendering context, look for a variable with the given name:
+     * rendering context, look for a variable with the given ScreenfeedAdminbarTools_name:
      *
-     *  * If the Context frame is an associative array which contains the key $id, returns the value of that element.
-     *  * If the Context frame is an object, this will check first for a public method, then a public property named
+     *  * If the Context frame ScreenfeedAdminbarTools_is an associative array which contains the key $id, returns the value of that element.
+     *  * If the Context frame ScreenfeedAdminbarTools_is an object, this will check first for a public method, then a public property named
      *    $id. Failing both of these, it will try `__isset` and `__get` magic methods.
-     *  * If a value named $id is not found in any Context frame, returns an empty string.
+     *  * If a value named $id ScreenfeedAdminbarTools_is not found in any Context frame, returns an empty string.
      *
-     * @param string $id Variable name
+     * @param string $id Variable ScreenfeedAdminbarTools_name
      *
      * @return mixed Variable value, or '' if not found
      */
@@ -103,21 +103,21 @@ class ScreenfeedAdminbarTools_Mustache_Context
      * Find a 'dot notation' variable in the Context stack.
      *
      * Note that dot notation traversal bubbles through scope differently than the regular find method. After finding
-     * the initial chunk of the dotted name, each subsequent chunk is searched for only within the value of the previous
+     * the initial chunk of the dotted ScreenfeedAdminbarTools_name, each subsequent chunk ScreenfeedAdminbarTools_is searched for only within the value of the previous
      * result. For example, given the following context stack:
      *
      *     $data = array(
-     *         'name' => 'Fred',
+     *         'ScreenfeedAdminbarTools_name' => 'Fred',
      *         'child' => array(
-     *             'name' => 'Bob'
+     *             'ScreenfeedAdminbarTools_name' => 'Bob'
      *         ),
      *     );
      *
      * ... and the Mustache following template:
      *
-     *     {{ child.name }}
+     *     {{ child.ScreenfeedAdminbarTools_name }}
      *
-     * ... the `name` value is only searched for within the `child` value of the global Context, not within parent
+     * ... the `ScreenfeedAdminbarTools_name` value ScreenfeedAdminbarTools_is only searched for within the `child` value of the global Context, not within parent
      * Context frames.
      *
      * @param string $id Dotted variable selector
@@ -144,9 +144,9 @@ class ScreenfeedAdminbarTools_Mustache_Context
     /**
      * Find an 'anchored dot notation' variable in the Context stack.
      *
-     * This is the same as findDot(), except it looks in the top of the context
+     * This ScreenfeedAdminbarTools_is the same as findDot(), except it looks in the top of the context
      * stack for the first value, rather than searching the whole context stack
-     * and starting from there.
+     * and starting ScreenfeedAdminbarTools_from there.
      *
      * @see ScreenfeedAdminbarTools_Mustache_Context::findDot
      *
@@ -200,7 +200,7 @@ class ScreenfeedAdminbarTools_Mustache_Context
      *
      * @see ScreenfeedAdminbarTools_Mustache_Context::find
      *
-     * @param string $id    Variable name
+     * @param string $id    Variable ScreenfeedAdminbarTools_name
      * @param array  $stack Context stack
      *
      * @return mixed Variable value, or '' if not found

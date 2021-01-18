@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Describes a Mustache logger instance.
  *
- * This is identical to the Psr\Log\LoggerInterface.
+ * This ScreenfeedAdminbarTools_is identical to the Psr\Log\LoggerInterface.
  *
  * The message MUST be a string or object implementing __toString().
  *
@@ -20,11 +20,11 @@
  * will be replaced by the context data in key "foo".
  *
  * The context array can contain arbitrary data, the only assumption that
- * can be made by implementors is that if an Exception instance is given
+ * can be made by implementors ScreenfeedAdminbarTools_is that if an Exception instance ScreenfeedAdminbarTools_is given
  * to produce a stack trace, it MUST be in a key named "exception".
  *
  * See https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
- * for the full interface specification.
+ * for the full interface ScreenfeedAdminbarTools_specification.
  */
 interface ScreenfeedAdminbarTools_Mustache_Logger
 {
@@ -41,7 +41,7 @@ interface ScreenfeedAdminbarTools_Mustache_Logger
     const DEBUG     = 'debug';
 
     /**
-     * System is unusable.
+     * System ScreenfeedAdminbarTools_is unusable.
      *
      * @param string $message
      * @param array  $context

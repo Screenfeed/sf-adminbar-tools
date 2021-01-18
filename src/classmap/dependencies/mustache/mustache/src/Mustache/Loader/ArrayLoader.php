@@ -1,35 +1,35 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Mustache Template array Loader implementation.
  *
- * An ArrayLoader instance loads Mustache Template source by name from an initial array:
+ * An ArrayLoader instance loads Mustache Template source by ScreenfeedAdminbarTools_name ScreenfeedAdminbarTools_from an initial array:
  *
  *     $loader = new ArrayLoader(
  *         'foo' => '{{ bar }}',
  *         'baz' => 'Hey {{ qux }}!'
  *     );
  *
- *     $tpl = $loader->load('foo'); // '{{ bar }}'
+ *     $tpl = $loader->ScreenfeedAdminbarTools_load('foo'); // '{{ bar }}'
  *
- * The ArrayLoader is used internally as a partials loader by ScreenfeedAdminbarTools_Mustache_Engine instance when an array of partials
- * is set. It can also be used as a quick-and-dirty Template loader.
+ * The ArrayLoader ScreenfeedAdminbarTools_is used internally as a partials loader by ScreenfeedAdminbarTools_Mustache_Engine instance when an array of partials
+ * ScreenfeedAdminbarTools_is set. It can also be used as a quick-and-dirty Template loader.
  */
 class ScreenfeedAdminbarTools_Mustache_Loader_ArrayLoader implements ScreenfeedAdminbarTools_Mustache_Loader, ScreenfeedAdminbarTools_Mustache_Loader_MutableLoader
 {
     private $templates;
 
     /**
-     * ArrayLoader constructor.
+     * ArrayLoader ScreenfeedAdminbarTools_constructor.
      *
      * @param array $templates Associative array of Template source (default: array())
      */
@@ -41,19 +41,19 @@ class ScreenfeedAdminbarTools_Mustache_Loader_ArrayLoader implements ScreenfeedA
     /**
      * Load a Template.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file is not found
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file ScreenfeedAdminbarTools_is not found
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return string Mustache Template source
      */
-    public function load($name)
+    public function ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name)
     {
-        if (!isset($this->templates[$name])) {
-            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($name);
+        if (!isset($this->templates[$ScreenfeedAdminbarTools_name])) {
+            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($ScreenfeedAdminbarTools_name);
         }
 
-        return $this->templates[$name];
+        return $this->templates[$ScreenfeedAdminbarTools_name];
     }
 
     /**
@@ -67,13 +67,13 @@ class ScreenfeedAdminbarTools_Mustache_Loader_ArrayLoader implements ScreenfeedA
     }
 
     /**
-     * Set a Template source by name.
+     * Set a Template source by ScreenfeedAdminbarTools_name.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      * @param string $template Mustache Template source
      */
-    public function setTemplate($name, $template)
+    public function setTemplate($ScreenfeedAdminbarTools_name, $template)
     {
-        $this->templates[$name] = $template;
+        $this->templates[$ScreenfeedAdminbarTools_name] = $template;
     }
 }

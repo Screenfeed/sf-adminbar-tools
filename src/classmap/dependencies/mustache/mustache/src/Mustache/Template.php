@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -27,7 +27,7 @@ abstract class ScreenfeedAdminbarTools_Mustache_Template
     protected $strictCallables = false;
 
     /**
-     * Mustache Template constructor.
+     * Mustache Template ScreenfeedAdminbarTools_constructor.
      *
      * @param ScreenfeedAdminbarTools_Mustache_Engine $mustache
      */
@@ -40,8 +40,8 @@ abstract class ScreenfeedAdminbarTools_Mustache_Template
      * Mustache Template instances can be treated as a function and rendered by simply calling them.
      *
      *     $m = new ScreenfeedAdminbarTools_Mustache_Engine;
-     *     $tpl = $m->loadTemplate('Hello, {{ name }}!');
-     *     echo $tpl(array('name' => 'World')); // "Hello, World!"
+     *     $tpl = $m->loadTemplate('Hello, {{ ScreenfeedAdminbarTools_name }}!');
+     *     echo $tpl(array('ScreenfeedAdminbarTools_name' => 'World')); // "Hello, World!"
      *
      * @see ScreenfeedAdminbarTools_Mustache_Template::render
      *
@@ -71,9 +71,9 @@ abstract class ScreenfeedAdminbarTools_Mustache_Template
     /**
      * Internal rendering method implemented by Mustache Template concrete subclasses.
      *
-     * This is where the magic happens :)
+     * This ScreenfeedAdminbarTools_is where the magic happens :)
      *
-     * NOTE: This method is not part of the Mustache.php public API.
+     * NOTE: This method ScreenfeedAdminbarTools_is not part of the Mustache.php public API.
      *
      * @param ScreenfeedAdminbarTools_Mustache_Context $context
      * @param string           $indent  (default: '')
@@ -89,27 +89,27 @@ abstract class ScreenfeedAdminbarTools_Mustache_Template
      * should be iterated, hashes should be treated as objects. Mustache follows this paradigm for Ruby, Javascript,
      * Java, Python, etc.
      *
-     * PHP, however, treats lists and hashes as one primitive type: array. So Mustache.php needs a way to distinguish
+     * ScreenfeedAdminbarTools_PHP, however, treats lists and hashes as one primitive type: array. So Mustache.php needs a way to distinguish
      * between between a list of things (numeric, normalized array) and a set of variables to be used as section context
      * (associative array). In other words, this will be iterated over:
      *
      *     $items = array(
-     *         array('name' => 'foo'),
-     *         array('name' => 'bar'),
-     *         array('name' => 'baz'),
+     *         array('ScreenfeedAdminbarTools_name' => 'foo'),
+     *         array('ScreenfeedAdminbarTools_name' => 'bar'),
+     *         array('ScreenfeedAdminbarTools_name' => 'baz'),
      *     );
      *
      * ... but this will be used as a section context block:
      *
      *     $items = array(
-     *         1        => array('name' => 'foo'),
-     *         'banana' => array('name' => 'bar'),
-     *         42       => array('name' => 'baz'),
+     *         1        => array('ScreenfeedAdminbarTools_name' => 'foo'),
+     *         'banana' => array('ScreenfeedAdminbarTools_name' => 'bar'),
+     *         42       => array('ScreenfeedAdminbarTools_name' => 'baz'),
      *     );
      *
      * @param mixed $value
      *
-     * @return bool True if the value is 'iterable'
+     * @return bool True if the value ScreenfeedAdminbarTools_is 'iterable'
      */
     protected function isIterable($value)
     {
@@ -160,7 +160,7 @@ abstract class ScreenfeedAdminbarTools_Mustache_Template
     /**
      * Resolve a context value.
      *
-     * Invoke the value if it is callable, otherwise return the value.
+     * Invoke the value if it ScreenfeedAdminbarTools_is callable, otherwise return the value.
      *
      * @param mixed            $value
      * @param ScreenfeedAdminbarTools_Mustache_Context $context

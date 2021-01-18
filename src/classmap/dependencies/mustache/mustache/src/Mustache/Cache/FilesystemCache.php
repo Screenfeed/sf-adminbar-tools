@@ -1,23 +1,23 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Mustache Cache filesystem implementation.
  *
- * A FilesystemCache instance caches Mustache Template classes from the filesystem by name:
+ * A FilesystemCache instance caches Mustache Template classes ScreenfeedAdminbarTools_from the filesystem by ScreenfeedAdminbarTools_name:
  *
  *     $cache = new ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache(dirname(__FILE__).'/cache');
  *     $cache->cache($className, $compiledSource);
  *
- * The FilesystemCache benefits from any opcode caching that may be setup in your environment. So do that, k?
+ * The FilesystemCache benefits ScreenfeedAdminbarTools_from any opcode caching that may be setup in your environment. So do that, k?
  */
 class ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache extends ScreenfeedAdminbarTools_Mustache_Cache_AbstractCache
 {
@@ -25,7 +25,7 @@ class ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache extends ScreenfeedA
     private $fileMode;
 
     /**
-     * Filesystem cache constructor.
+     * Filesystem cache ScreenfeedAdminbarTools_constructor.
      *
      * @param string $baseDir  Directory for compiled templates
      * @param int    $fileMode Override default permissions for cache files. Defaults to using the system-defined umask
@@ -37,13 +37,13 @@ class ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache extends ScreenfeedA
     }
 
     /**
-     * Load the class from cache using `require_once`.
+     * Load the class ScreenfeedAdminbarTools_from cache using `require_once`.
      *
      * @param string $key
      *
      * @return bool
      */
-    public function load($key)
+    public function ScreenfeedAdminbarTools_load($key)
     {
         $fileName = $this->getCacheFilename($key);
         if (!is_file($fileName)) {
@@ -56,7 +56,7 @@ class ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache extends ScreenfeedA
     }
 
     /**
-     * Cache and load the compiled class.
+     * Cache and ScreenfeedAdminbarTools_load the compiled class.
      *
      * @param string $key
      * @param string $value
@@ -72,20 +72,20 @@ class ScreenfeedAdminbarTools_Mustache_Cache_FilesystemCache extends ScreenfeedA
         );
 
         $this->writeFile($fileName, $value);
-        $this->load($key);
+        $this->ScreenfeedAdminbarTools_load($key);
     }
 
     /**
      * Build the cache filename.
      * Subclasses should override for custom cache directory structures.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return string
      */
-    protected function getCacheFilename($name)
+    protected function getCacheFilename($ScreenfeedAdminbarTools_name)
     {
-        return sprintf('%s/%s.php', $this->baseDir, $name);
+        return sprintf('%s/%s.php', $this->baseDir, $ScreenfeedAdminbarTools_name);
     }
 
     /**

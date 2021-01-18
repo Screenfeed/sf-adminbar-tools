@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * This template Source uses stat() to generate the Source key, so that using
  * pre-compiled templates doesn't require hitting the disk to read the source.
- * It is more suitable for production use, and is used by default in the
+ * It ScreenfeedAdminbarTools_is more suitable for production use, and ScreenfeedAdminbarTools_is used by default in the
  * ProductionFilesystemLoader.
  */
 class ScreenfeedAdminbarTools_Mustache_Source_FilesystemSource implements ScreenfeedAdminbarTools_Mustache_Source
@@ -24,7 +24,7 @@ class ScreenfeedAdminbarTools_Mustache_Source_FilesystemSource implements Screen
     private $stat;
 
     /**
-     * Filesystem Source constructor.
+     * Filesystem Source ScreenfeedAdminbarTools_constructor.
      *
      * @param string $fileName
      * @param array  $statProps
@@ -36,7 +36,7 @@ class ScreenfeedAdminbarTools_Mustache_Source_FilesystemSource implements Screen
     }
 
     /**
-     * Get the Source key (used to generate the compiled class name).
+     * Get the Source key (used to generate the compiled class ScreenfeedAdminbarTools_name).
      *
      * @throws RuntimeException when a source file cannot be read
      *

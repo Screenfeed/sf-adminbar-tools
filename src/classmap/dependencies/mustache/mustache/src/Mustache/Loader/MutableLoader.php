@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -22,10 +22,10 @@ interface ScreenfeedAdminbarTools_Mustache_Loader_MutableLoader
     public function setTemplates(array $templates);
 
     /**
-     * Set a Template source by name.
+     * Set a Template source by ScreenfeedAdminbarTools_name.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      * @param string $template Mustache Template source
      */
-    public function setTemplate($name, $template);
+    public function setTemplate($ScreenfeedAdminbarTools_name, $template);
 }

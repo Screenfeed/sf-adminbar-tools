@@ -1,25 +1,15 @@
 <?php
+
 namespace Screenfeed\AdminbarTools\Dependencies\Composer\Installers;
 
-/**
- * Class PiwikInstaller
- *
- * @package Screenfeed\AdminbarTools\Dependencies\Composer\Installers
- */
-class PiwikInstaller extends BaseInstaller
+class ProcessWireInstaller extends BaseInstaller
 {
-    /**
-     * @var array
-     */
     protected $locations = array(
-        'plugin' => 'plugins/{$name}/',
+        'module'  => 'site/modules/{$name}/',
     );
 
     /**
      * Format package name to CamelCase
-     * @param array $vars
-     *
-     * @return array
      */
     public function inflectPackageVars($vars)
     {

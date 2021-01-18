@@ -4,7 +4,7 @@ namespace Screenfeed\AdminbarTools\Dependencies\Composer\Installers;
 /**
  * Class DolibarrInstaller
  *
- * @package Composer\Installers
+ * @package Screenfeed\AdminbarTools\Dependencies\Composer\Installers
  * @author  Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
  */
 class DolibarrInstaller extends BaseInstaller

@@ -32,7 +32,7 @@
 	"require-dev": {
 		"php": "^7.2",
 		"automattic/phpcs-neutron-standard": "*",
-		"coenjacobs/mozart": "0.6.0-beta-3",
+		"coenjacobs/mozart": "^0.6.0",
 		"dangoodman/composer-for-wordpress": "^2.0",
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"phpcompatibility/phpcompatibility-wp": "*",
@@ -80,12 +80,12 @@
 			"@metrics"
 		],
 		"post-install-cmd": [
-			"\"vendor/bin/mozart\" compose",
-			"composer dump-autoload"
+			"[ $COMPOSER_DEV_MODE -eq 0 ] || \"vendor/bin/mozart\" compose",
+			"[ $COMPOSER_DEV_MODE -eq 0 ] || composer dump-autoload"
 		],
 		"post-update-cmd": [
-			"\"vendor/bin/mozart\" compose",
-			"composer dump-autoload"
+			"[ $COMPOSER_DEV_MODE -eq 0 ] || \"vendor/bin/mozart\" compose",
+			"[ $COMPOSER_DEV_MODE -eq 0 ] || composer dump-autoload"
 		]
 	}
 }

@@ -1,23 +1,23 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
- * Mustache class autoloader.
+ * Mustache class ScreenfeedAdminbarTools_autoloader.
  */
 class ScreenfeedAdminbarTools_Mustache_Autoloader
 {
     private $baseDir;
 
     /**
-     * An array where the key is the baseDir and the key is an instance of this
+     * An array where the key ScreenfeedAdminbarTools_is the baseDir and the key ScreenfeedAdminbarTools_is an instance of this
      * class.
      *
      * @var array
@@ -25,7 +25,7 @@ class ScreenfeedAdminbarTools_Mustache_Autoloader
     private static $instances;
 
     /**
-     * Autoloader constructor.
+     * Autoloader ScreenfeedAdminbarTools_constructor.
      *
      * @param string $baseDir Mustache library base directory (default: dirname(__FILE__).'/..')
      */
@@ -45,7 +45,7 @@ class ScreenfeedAdminbarTools_Mustache_Autoloader
     }
 
     /**
-     * Register a new instance as an SPL autoloader.
+     * Register a new instance as an SPL ScreenfeedAdminbarTools_autoloader.
      *
      * @param string $baseDir Mustache library base directory (default: dirname(__FILE__).'/..')
      *

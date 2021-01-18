@@ -1,23 +1,23 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * A Mustache Template loader for inline templates.
  *
- * With the InlineLoader, templates can be defined at the end of any PHP source
+ * With the InlineLoader, templates can be defined ScreenfeedAdminbarTools_at the end of any ScreenfeedAdminbarTools_PHP source
  * file:
  *
  *     $loader  = new ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader(__FILE__, __COMPILER_HALT_OFFSET__);
- *     $hello   = $loader->load('hello');
- *     $goodbye = $loader->load('goodbye');
+ *     $hello   = $loader->ScreenfeedAdminbarTools_load('hello');
+ *     $goodbye = $loader->ScreenfeedAdminbarTools_load('goodbye');
  *
  *     __halt_compiler();
  *
@@ -27,25 +27,25 @@
  *     @@ goodbye
  *     Goodbye, cruel {{ planet }}
  *
- * Templates are deliniated by lines containing only `@@ name`.
+ * Templates are deliniated by lines containing only `@@ ScreenfeedAdminbarTools_name`.
  *
- * The InlineLoader is well-suited to micro-frameworks such as Silex:
+ * The InlineLoader ScreenfeedAdminbarTools_is well-suited to micro-frameworks such as Silex:
  *
  *     $app->register(new MustacheServiceProvider, array(
  *         'mustache.loader' => new ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader(__FILE__, __COMPILER_HALT_OFFSET__)
  *     ));
  *
- *     $app->get('/{name}', function ($name) use ($app) {
- *         return $app['mustache']->render('hello', compact('name'));
+ *     $app->get('/{ScreenfeedAdminbarTools_name}', function ($ScreenfeedAdminbarTools_name) use ($app) {
+ *         return $app['mustache']->render('hello', compact('ScreenfeedAdminbarTools_name'));
  *     })
- *     ->value('name', 'world');
+ *     ->value('ScreenfeedAdminbarTools_name', 'world');
  *
  *     // ...
  *
  *     __halt_compiler();
  *
  *     @@ hello
- *     Hello, {{ name }}!
+ *     Hello, {{ ScreenfeedAdminbarTools_name }}!
  */
 class ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader implements ScreenfeedAdminbarTools_Mustache_Loader
 {
@@ -61,7 +61,7 @@ class ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader implements Screenfeed
      *
      *     $loader = new ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader(__FILE__, __COMPILER_HALT_OFFSET__);
      *
-     * Note that this only works if the loader is instantiated inside the same
+     * Note that this only works if the loader ScreenfeedAdminbarTools_is instantiated inside the same
      * file as the inline templates. If the templates are located in another
      * file, it would be necessary to manually specify the filename and offset.
      *
@@ -85,27 +85,27 @@ class ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader implements Screenfeed
     }
 
     /**
-     * Load a Template by name.
+     * Load a Template by ScreenfeedAdminbarTools_name.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file is not found
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file ScreenfeedAdminbarTools_is not found
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return string Mustache Template source
      */
-    public function load($name)
+    public function ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name)
     {
         $this->loadTemplates();
 
-        if (!array_key_exists($name, $this->templates)) {
-            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($name);
+        if (!array_key_exists($ScreenfeedAdminbarTools_name, $this->templates)) {
+            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($ScreenfeedAdminbarTools_name);
         }
 
-        return $this->templates[$name];
+        return $this->templates[$ScreenfeedAdminbarTools_name];
     }
 
     /**
-     * Parse and load templates from the end of a source file.
+     * Parse and ScreenfeedAdminbarTools_load templates ScreenfeedAdminbarTools_from the end of a source file.
      */
     protected function loadTemplates()
     {
@@ -114,8 +114,8 @@ class ScreenfeedAdminbarTools_Mustache_Loader_InlineLoader implements Screenfeed
             $data = file_get_contents($this->fileName, false, null, $this->offset);
             foreach (preg_split("/^@@(?= [\w\d\.]+$)/m", $data, -1) as $chunk) {
                 if (trim($chunk)) {
-                    list($name, $content)         = explode("\n", $chunk, 2);
-                    $this->templates[trim($name)] = trim($content);
+                    list($ScreenfeedAdminbarTools_name, $content)         = explode("\n", $chunk, 2);
+                    $this->templates[trim($ScreenfeedAdminbarTools_name)] = trim($content);
                 }
             }
         }

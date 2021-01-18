@@ -1,27 +1,27 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
- * This is a simple Logger implementation that other Loggers can inherit from.
+ * This ScreenfeedAdminbarTools_is a simple Logger implementation that other Loggers can inherit ScreenfeedAdminbarTools_from.
  *
- * This is identical to the Psr\Log\AbstractLogger.
+ * This ScreenfeedAdminbarTools_is identical to the Psr\Log\AbstractLogger.
  *
  * It simply delegates all log-level-specific methods to the `log` method to
- * reduce boilerplate code that a simple Logger that does the same thing with
+ * reduce boilerplate ScreenfeedAdminbarTools_code that a simple Logger that does the same thing with
  * messages regardless of the error level has to implement.
  */
 abstract class ScreenfeedAdminbarTools_Mustache_Logger_AbstractLogger implements ScreenfeedAdminbarTools_Mustache_Logger
 {
     /**
-     * System is unusable.
+     * System ScreenfeedAdminbarTools_is unusable.
      *
      * @param string $message
      * @param array  $context

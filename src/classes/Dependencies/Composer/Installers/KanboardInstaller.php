@@ -8,7 +8,7 @@ namespace Screenfeed\AdminbarTools\Dependencies\Composer\Installers;
  * kanboard.net
  *
  * Class KanboardInstaller
- * @package Composer\Installers
+ * @package Screenfeed\AdminbarTools\Dependencies\Composer\Installers
  */
 class KanboardInstaller extends BaseInstaller
 {

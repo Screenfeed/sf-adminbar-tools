@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -18,16 +18,16 @@
 interface ScreenfeedAdminbarTools_Mustache_Cache
 {
     /**
-     * Load a compiled ScreenfeedAdminbarTools_Mustache_Template class from cache.
+     * Load a compiled ScreenfeedAdminbarTools_Mustache_Template class ScreenfeedAdminbarTools_from cache.
      *
      * @param string $key
      *
-     * @return bool indicates successfully class load
+     * @return bool indicates successfully class ScreenfeedAdminbarTools_load
      */
-    public function load($key);
+    public function ScreenfeedAdminbarTools_load($key);
 
     /**
-     * Cache and load a compiled ScreenfeedAdminbarTools_Mustache_Template class.
+     * Cache and ScreenfeedAdminbarTools_load a compiled ScreenfeedAdminbarTools_Mustache_Template class.
      *
      * @param string $key
      * @param string $value

@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -21,7 +21,7 @@ class ScreenfeedAdminbarTools_Mustache_Loader_ProductionFilesystemLoader extends
     private $statProps;
 
     /**
-     * Mustache production filesystem Loader constructor.
+     * Mustache production filesystem Loader ScreenfeedAdminbarTools_constructor.
      *
      * Passing an $options array allows overriding certain Loader options during instantiation:
      *
@@ -65,20 +65,20 @@ class ScreenfeedAdminbarTools_Mustache_Loader_ProductionFilesystemLoader extends
     }
 
     /**
-     * Helper function for loading a Mustache file by name.
+     * Helper function for loading a Mustache file by ScreenfeedAdminbarTools_name.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file is not found.
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file ScreenfeedAdminbarTools_is not found.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return ScreenfeedAdminbarTools_Mustache_Source Mustache Template source
      */
-    protected function loadFile($name)
+    protected function loadFile($ScreenfeedAdminbarTools_name)
     {
-        $fileName = $this->getFileName($name);
+        $fileName = $this->getFileName($ScreenfeedAdminbarTools_name);
 
         if (!file_exists($fileName)) {
-            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($name);
+            throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($ScreenfeedAdminbarTools_name);
         }
 
         return new ScreenfeedAdminbarTools_Mustache_Source_FilesystemSource($fileName, $this->statProps);

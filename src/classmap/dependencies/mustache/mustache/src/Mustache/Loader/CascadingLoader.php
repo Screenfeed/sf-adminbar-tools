@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -46,24 +46,24 @@ class ScreenfeedAdminbarTools_Mustache_Loader_CascadingLoader implements Screenf
     }
 
     /**
-     * Load a Template by name.
+     * Load a Template by ScreenfeedAdminbarTools_name.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file is not found
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException If a template file ScreenfeedAdminbarTools_is not found
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return string Mustache Template source
      */
-    public function load($name)
+    public function ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name)
     {
         foreach ($this->loaders as $loader) {
             try {
-                return $loader->load($name);
+                return $loader->ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name);
             } catch (ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException $e) {
                 // do nothing, check the next loader.
             }
         }
 
-        throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($name);
+        throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($ScreenfeedAdminbarTools_name);
     }
 }

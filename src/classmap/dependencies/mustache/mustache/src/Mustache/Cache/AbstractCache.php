@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -45,7 +45,7 @@ abstract class ScreenfeedAdminbarTools_Mustache_Cache_AbstractCache implements S
     }
 
     /**
-     * Add a log record if logging is enabled.
+     * Add a log record if logging ScreenfeedAdminbarTools_is enabled.
      *
      * @param int    $level   The logging level
      * @param string $message The log message

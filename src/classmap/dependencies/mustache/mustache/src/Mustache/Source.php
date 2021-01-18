@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -15,12 +15,12 @@
 interface ScreenfeedAdminbarTools_Mustache_Source
 {
     /**
-     * Get the Source key (used to generate the compiled class name).
+     * Get the Source key (used to generate the compiled class ScreenfeedAdminbarTools_name).
      *
      * This must return a distinct key for each template source. For example, an
      * MD5 hash of the template contents would probably do the trick. The
      * ProductionFilesystemLoader uses mtime and file path. If your production
-     * source directory is under version control, you could use the current Git
+     * source directory ScreenfeedAdminbarTools_is under version control, you could use the current Git
      * rev and the file path...
      *
      * @throws RuntimeException when a source file cannot be read

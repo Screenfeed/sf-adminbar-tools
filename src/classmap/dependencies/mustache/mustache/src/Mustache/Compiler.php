@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Mustache Compiler class.
  *
- * This class is responsible for turning a Mustache token parse tree into normal PHP source code.
+ * This class ScreenfeedAdminbarTools_is responsible for turning a Mustache token parse tree into normal ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code.
  */
 class ScreenfeedAdminbarTools_Mustache_Compiler
 {
@@ -28,19 +28,19 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     private $strictCallables;
 
     /**
-     * Compile a Mustache token parse tree into PHP source code.
+     * Compile a Mustache token parse tree into ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code.
      *
-     * @param string $source          Mustache Template source code
+     * @param string $source          Mustache Template source ScreenfeedAdminbarTools_code
      * @param string $tree            Parse tree of Mustache tokens
-     * @param string $name            Mustache Template class name
+     * @param string $ScreenfeedAdminbarTools_name            Mustache Template class ScreenfeedAdminbarTools_name
      * @param bool   $customEscape    (default: false)
      * @param string $charset         (default: 'UTF-8')
      * @param bool   $strictCallables (default: false)
      * @param int    $entityFlags     (default: ENT_COMPAT)
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
-    public function compile($source, array $tree, $name, $customEscape = false, $charset = 'UTF-8', $strictCallables = false, $entityFlags = ENT_COMPAT)
+    public function compile($source, array $tree, $ScreenfeedAdminbarTools_name, $customEscape = false, $charset = 'UTF-8', $strictCallables = false, $entityFlags = ENT_COMPAT)
     {
         $this->pragmas         = $this->defaultPragmas;
         $this->sections        = array();
@@ -52,7 +52,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
         $this->charset         = $charset;
         $this->strictCallables = $strictCallables;
 
-        return $this->writeCode($tree, $name);
+        return $this->writeCode($tree, $ScreenfeedAdminbarTools_name);
     }
 
     /**
@@ -80,11 +80,11 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
      * @param array $tree  Parse tree of Mustache tokens
      * @param int   $level (default: 0)
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function walk(array $tree, $level = 0)
     {
-        $code = '';
+        $ScreenfeedAdminbarTools_code = '';
         $level++;
         foreach ($tree as $node) {
             switch ($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::TYPE]) {
@@ -93,7 +93,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_SECTION:
-                    $code .= $this->section(
+                    $ScreenfeedAdminbarTools_code .= $this->section(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NODES],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         isset($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS]) ? $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS] : array(),
@@ -106,7 +106,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_INVERTED:
-                    $code .= $this->invertedSection(
+                    $ScreenfeedAdminbarTools_code .= $this->invertedSection(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NODES],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         isset($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS]) ? $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS] : array(),
@@ -115,7 +115,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_PARTIAL:
-                    $code .= $this->partial(
+                    $ScreenfeedAdminbarTools_code .= $this->partial(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         isset($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDENT]) ? $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDENT] : '',
                         $level
@@ -123,7 +123,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_PARENT:
-                    $code .= $this->parent(
+                    $ScreenfeedAdminbarTools_code .= $this->parent(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         isset($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDENT]) ? $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDENT] : '',
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NODES],
@@ -132,7 +132,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_BLOCK_ARG:
-                    $code .= $this->blockArg(
+                    $ScreenfeedAdminbarTools_code .= $this->blockArg(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NODES],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDEX],
@@ -144,7 +144,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_BLOCK_VAR:
-                    $code .= $this->blockVar(
+                    $ScreenfeedAdminbarTools_code .= $this->blockVar(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NODES],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::INDEX],
@@ -161,7 +161,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_ESCAPED:
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_UNESCAPED:
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_UNESCAPED_2:
-                    $code .= $this->variable(
+                    $ScreenfeedAdminbarTools_code .= $this->variable(
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::NAME],
                         isset($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS]) ? $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::FILTERS] : array(),
                         $node[ScreenfeedAdminbarTools_Mustache_Tokenizer::TYPE] === ScreenfeedAdminbarTools_Mustache_Tokenizer::T_ESCAPED,
@@ -170,7 +170,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
                     break;
 
                 case ScreenfeedAdminbarTools_Mustache_Tokenizer::T_TEXT:
-                    $code .= $this->text($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::VALUE], $level);
+                    $ScreenfeedAdminbarTools_code .= $this->text($node[ScreenfeedAdminbarTools_Mustache_Tokenizer::VALUE], $level);
                     break;
 
                 default:
@@ -178,7 +178,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
             }
         }
 
-        return $code;
+        return $ScreenfeedAdminbarTools_code;
     }
 
     const KLASS = '<?php
@@ -215,23 +215,23 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const STRICT_CALLABLE = 'protected $strictCallables = true;';
 
     /**
-     * Generate Mustache Template class PHP source.
+     * Generate Mustache Template class ScreenfeedAdminbarTools_PHP source.
      *
      * @param array  $tree Parse tree of Mustache tokens
-     * @param string $name Mustache Template class name
+     * @param string $ScreenfeedAdminbarTools_name Mustache Template class ScreenfeedAdminbarTools_name
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
-    private function writeCode($tree, $name)
+    private function writeCode($tree, $ScreenfeedAdminbarTools_name)
     {
-        $code     = $this->walk($tree);
+        $ScreenfeedAdminbarTools_code     = $this->walk($tree);
         $sections = implode("\n", $this->sections);
         $blocks   = implode("\n", $this->blocks);
         $klass    = empty($this->sections) && empty($this->blocks) ? self::KLASS_NO_LAMBDAS : self::KLASS;
 
         $callable = $this->strictCallables ? $this->prepare(self::STRICT_CALLABLE) : '';
 
-        return sprintf($this->prepare($klass, 0, false, true), $name, $callable, $code, $sections, $blocks);
+        return sprintf($this->prepare($klass, 0, false, true), $ScreenfeedAdminbarTools_name, $callable, $ScreenfeedAdminbarTools_code, $sections, $blocks);
     }
 
     const BLOCK_VAR = '
@@ -244,17 +244,17 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const BLOCK_VAR_ELSE = '} else {%s';
 
     /**
-     * Generate Mustache Template inheritance block variable PHP source.
+     * Generate Mustache Template inheritance block variable ScreenfeedAdminbarTools_PHP source.
      *
      * @param array  $nodes Array of child tokens
-     * @param string $id    Section name
+     * @param string $id    Section ScreenfeedAdminbarTools_name
      * @param int    $start Section start offset
      * @param int    $end   Section end offset
      * @param string $otag  Current Mustache opening tag
      * @param string $ctag  Current Mustache closing tag
      * @param int    $level
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function blockVar($nodes, $id, $start, $end, $otag, $ctag, $level)
     {
@@ -271,17 +271,17 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const BLOCK_ARG = '%s => array($this, \'block%s\'),';
 
     /**
-     * Generate Mustache Template inheritance block argument PHP source.
+     * Generate Mustache Template inheritance block argument ScreenfeedAdminbarTools_PHP source.
      *
      * @param array  $nodes Array of child tokens
-     * @param string $id    Section name
+     * @param string $id    Section ScreenfeedAdminbarTools_name
      * @param int    $start Section start offset
      * @param int    $end   Section end offset
      * @param string $otag  Current Mustache opening tag
      * @param string $ctag  Current Mustache closing tag
      * @param int    $level
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function blockArg($nodes, $id, $start, $end, $otag, $ctag, $level)
     {
@@ -302,7 +302,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template inheritance block function PHP source.
+     * Generate Mustache Template inheritance block function ScreenfeedAdminbarTools_PHP source.
      *
      * @param array $nodes Array of child tokens
      *
@@ -310,11 +310,11 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
      */
     private function block($nodes)
     {
-        $code = $this->walk($nodes, 0);
-        $key = ucfirst(md5($code));
+        $ScreenfeedAdminbarTools_code = $this->walk($nodes, 0);
+        $key = ucfirst(md5($ScreenfeedAdminbarTools_code));
 
         if (!isset($this->blocks[$key])) {
-            $this->blocks[$key] = sprintf($this->prepare(self::BLOCK_FUNCTION, 0), $key, $code);
+            $this->blocks[$key] = sprintf($this->prepare(self::BLOCK_FUNCTION, 0), $key, $ScreenfeedAdminbarTools_code);
         }
 
         return $key;
@@ -355,10 +355,10 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template section PHP source.
+     * Generate Mustache Template section ScreenfeedAdminbarTools_PHP source.
      *
      * @param array    $nodes   Array of child tokens
-     * @param string   $id      Section name
+     * @param string   $id      Section ScreenfeedAdminbarTools_name
      * @param string[] $filters Array of filters
      * @param int      $start   Section start offset
      * @param int      $end     Section end offset
@@ -366,7 +366,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
      * @param string   $ctag    Current Mustache closing tag
      * @param int      $level
      *
-     * @return string Generated section PHP source code
+     * @return string Generated section ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function section($nodes, $id, $filters, $start, $end, $otag, $ctag, $level)
     {
@@ -404,14 +404,14 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template inverted section PHP source.
+     * Generate Mustache Template inverted section ScreenfeedAdminbarTools_PHP source.
      *
      * @param array    $nodes   Array of child tokens
-     * @param string   $id      Section name
+     * @param string   $id      Section ScreenfeedAdminbarTools_name
      * @param string[] $filters Array of filters
      * @param int      $level
      *
-     * @return string Generated inverted section PHP source code
+     * @return string Generated inverted section ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function invertedSection($nodes, $id, $filters, $level)
     {
@@ -430,13 +430,13 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template partial call PHP source.
+     * Generate Mustache Template partial call ScreenfeedAdminbarTools_PHP source.
      *
-     * @param string $id     Partial name
+     * @param string $id     Partial ScreenfeedAdminbarTools_name
      * @param string $indent Whitespace indent to apply to partial
      * @param int    $level
      *
-     * @return string Generated partial call PHP source code
+     * @return string Generated partial call ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function partial($id, $indent, $level)
     {
@@ -469,14 +469,14 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template inheritance parent call PHP source.
+     * Generate Mustache Template inheritance parent call ScreenfeedAdminbarTools_PHP source.
      *
-     * @param string $id       Parent tag name
+     * @param string $id       Parent tag ScreenfeedAdminbarTools_name
      * @param string $indent   Whitespace indent to apply to parent
      * @param array  $children Child nodes
      * @param int    $level
      *
-     * @return string Generated PHP source code
+     * @return string Generated ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code
      */
     private function parent($id, $indent, array $children, $level)
     {
@@ -498,7 +498,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
      *
      * @param array $node
      *
-     * @return bool True if $node is a block arg token
+     * @return bool True if $node ScreenfeedAdminbarTools_is a block arg token
      */
     private static function onlyBlockArgs(array $node)
     {
@@ -511,14 +511,14 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template variable interpolation PHP source.
+     * Generate Mustache Template variable interpolation ScreenfeedAdminbarTools_PHP source.
      *
-     * @param string   $id      Variable name
+     * @param string   $id      Variable ScreenfeedAdminbarTools_name
      * @param string[] $filters Array of filters
      * @param bool     $escape  Escape the variable value for output?
      * @param int      $level
      *
-     * @return string Generated variable interpolation PHP source
+     * @return string Generated variable interpolation ScreenfeedAdminbarTools_PHP source
      */
     private function variable($id, $filters, $escape, $level)
     {
@@ -539,12 +539,12 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     ';
 
     /**
-     * Generate Mustache Template variable filtering PHP source.
+     * Generate Mustache Template variable filtering ScreenfeedAdminbarTools_PHP source.
      *
      * @param string[] $filters Array of filters
      * @param int      $level
      *
-     * @return string Generated filter PHP source
+     * @return string Generated filter ScreenfeedAdminbarTools_PHP source
      */
     private function getFilters(array $filters, $level)
     {
@@ -552,11 +552,11 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
             return '';
         }
 
-        $name     = array_shift($filters);
-        $method   = $this->getFindMethod($name);
-        $filter   = ($method !== 'last') ? var_export($name, true) : '';
+        $ScreenfeedAdminbarTools_name     = array_shift($filters);
+        $method   = $this->getFindMethod($ScreenfeedAdminbarTools_name);
+        $filter   = ($method !== 'last') ? var_export($ScreenfeedAdminbarTools_name, true) : '';
         $callable = $this->getCallable('$filter');
-        $msg      = var_export($name, true);
+        $msg      = var_export($ScreenfeedAdminbarTools_name, true);
 
         return sprintf($this->prepare(self::FILTER, $level), $method, $filter, $callable, $msg, $this->getFilters($filters, $level));
     }
@@ -565,31 +565,31 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const TEXT = '$buffer .= %s%s;';
 
     /**
-     * Generate Mustache Template output Buffer call PHP source.
+     * Generate Mustache Template output Buffer call ScreenfeedAdminbarTools_PHP source.
      *
      * @param string $text
      * @param int    $level
      *
-     * @return string Generated output Buffer call PHP source
+     * @return string Generated output Buffer call ScreenfeedAdminbarTools_PHP source
      */
     private function text($text, $level)
     {
         $indentNextLine = (substr($text, -1) === "\n");
-        $code = sprintf($this->prepare(self::TEXT, $level), $this->flushIndent(), var_export($text, true));
+        $ScreenfeedAdminbarTools_code = sprintf($this->prepare(self::TEXT, $level), $this->flushIndent(), var_export($text, true));
         $this->indentNextLine = $indentNextLine;
 
-        return $code;
+        return $ScreenfeedAdminbarTools_code;
     }
 
     /**
-     * Prepare PHP source code snippet for output.
+     * Prepare ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code snippet for output.
      *
      * @param string $text
      * @param int    $bonus          Additional indent level (default: 0)
      * @param bool   $prependNewline Prepend a newline to the snippet? (default: true)
      * @param bool   $appendNewline  Append a newline to the snippet? (default: false)
      *
-     * @return string PHP source code snippet
+     * @return string ScreenfeedAdminbarTools_PHP source ScreenfeedAdminbarTools_code snippet
      */
     private function prepare($text, $bonus = 0, $prependNewline = true, $appendNewline = false)
     {
@@ -632,9 +632,9 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
      * @see ScreenfeedAdminbarTools_Mustache_Context::findDot
      * @see ScreenfeedAdminbarTools_Mustache_Context::last
      *
-     * @param string $id Variable name
+     * @param string $id Variable ScreenfeedAdminbarTools_name
      *
-     * @return string `find` method name
+     * @return string `find` method ScreenfeedAdminbarTools_name
      */
     private function getFindMethod($id)
     {
@@ -659,11 +659,11 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const STRICT_IS_CALLABLE = 'is_object(%s) && is_callable(%s)';
 
     /**
-     * Helper function to compile strict vs lax "is callable" logic.
+     * Helper function to compile strict vs lax "ScreenfeedAdminbarTools_is callable" logic.
      *
      * @param string $variable (default: '$value')
      *
-     * @return string "is callable" logic
+     * @return string "ScreenfeedAdminbarTools_is callable" logic
      */
     private function getCallable($variable = '$value')
     {
@@ -675,7 +675,7 @@ class ScreenfeedAdminbarTools_Mustache_Compiler
     const LINE_INDENT = '$indent . ';
 
     /**
-     * Get the current $indent prefix to write to the buffer.
+     * Get the current $indent ScreenfeedAdminbarTools_prefix to write to the buffer.
      *
      * @return string "$indent . " or ""
      */

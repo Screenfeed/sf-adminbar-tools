@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
@@ -23,7 +23,7 @@ class ScreenfeedAdminbarTools_Mustache_LambdaHelper
     private $delims;
 
     /**
-     * Mustache Lambda Helper constructor.
+     * Mustache Lambda Helper ScreenfeedAdminbarTools_constructor.
      *
      * @param ScreenfeedAdminbarTools_Mustache_Engine  $mustache Mustache engine instance
      * @param ScreenfeedAdminbarTools_Mustache_Context $context  Rendering context

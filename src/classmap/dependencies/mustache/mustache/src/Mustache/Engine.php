@@ -1,23 +1,23 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
- * A Mustache implementation in PHP.
+ * A Mustache implementation in ScreenfeedAdminbarTools_PHP.
  *
  * {@link http://defunkt.github.com/mustache}
  *
- * Mustache is a framework-agnostic logic-less templating language. It enforces separation of view
- * logic from template files. In fact, it is not even possible to embed logic in the template.
+ * Mustache ScreenfeedAdminbarTools_is a framework-agnostic logic-less templating language. It enforces separation of view
+ * logic ScreenfeedAdminbarTools_from template files. In fact, it ScreenfeedAdminbarTools_is not even possible to embed logic in the template.
  *
- * This is very, very rad.
+ * This ScreenfeedAdminbarTools_is very, very rad.
  *
  * @author Justin Hileman {@link http://justinhileman.com}
  */
@@ -62,29 +62,29 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     private $compiler;
 
     /**
-     * Mustache class constructor.
+     * Mustache class ScreenfeedAdminbarTools_constructor.
      *
      * Passing an $options array allows overriding certain Mustache options during instantiation:
      *
      *     $options = array(
-     *         // The class prefix for compiled templates. Defaults to '__Mustache_'.
+     *         // The class ScreenfeedAdminbarTools_prefix for compiled templates. Defaults to '__Mustache_'.
      *         'template_class_prefix' => '__MyTemplates_',
      *
      *         // A Mustache cache instance or a cache directory string for compiled templates.
-     *         // Mustache will not cache templates unless this is set.
+     *         // Mustache will not cache templates unless this ScreenfeedAdminbarTools_is set.
      *         'cache' => dirname(__FILE__).'/tmp/cache/mustache',
      *
-     *         // Override default permissions for cache files. Defaults to using the system-defined umask. It is
+     *         // Override default permissions for cache files. Defaults to using the system-defined umask. It ScreenfeedAdminbarTools_is
      *         // *strongly* recommended that you configure your umask properly rather than overriding permissions here.
      *         'cache_file_mode' => 0666,
      *
-     *         // Optionally, enable caching for lambda section templates. This is generally not recommended, as lambda
-     *         // sections are often too dynamic to benefit from caching.
+     *         // Optionally, enable caching for lambda section templates. This ScreenfeedAdminbarTools_is generally not recommended, as lambda
+     *         // sections are often too dynamic to benefit ScreenfeedAdminbarTools_from caching.
      *         'cache_lambda_templates' => true,
      *
      *         // Customize the tag delimiters used by this engine instance. Note that overriding here changes the
      *         // delimiters used to parse all templates and partials loaded by this instance. To override just for a
-     *         // single template, use an inline "change delimiters" tag at the start of the template file:
+     *         // single template, use an inline "change delimiters" tag ScreenfeedAdminbarTools_at the start of the template file:
      *         //
      *         //     {{=<% %>=}}
      *         //
@@ -118,15 +118,15 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *         // Character set for `htmlspecialchars`. Defaults to 'UTF-8'. Use 'UTF-8'.
      *         'charset' => 'ISO-8859-1',
      *
-     *         // A Mustache Logger instance. No logging will occur unless this is set. Using a PSR-3 compatible
-     *         // logging library -- such as Monolog -- is highly recommended. A simple stream logger implementation is
+     *         // A Mustache Logger instance. No logging will occur unless this ScreenfeedAdminbarTools_is set. Using a PSR-3 compatible
+     *         // logging library -- such as Monolog -- ScreenfeedAdminbarTools_is highly recommended. A simple stream logger implementation ScreenfeedAdminbarTools_is
      *         // available as well:
      *         'logger' => new ScreenfeedAdminbarTools_Mustache_Logger_StreamLogger('php://stderr'),
      *
      *         // Only treat Closure instances and invokable classes as callable. If true, values like
      *         // `array('ClassName', 'methodName')` and `array($classInstance, 'methodName')`, which are traditionally
-     *         // "callable" in PHP, are not called to resolve variables for interpolation or section contexts. This
-     *         // helps protect against arbitrary code execution when user input is passed directly into the template.
+     *         // "callable" in ScreenfeedAdminbarTools_PHP, are not called to resolve variables for interpolation or section contexts. This
+     *         // helps protect against arbitrary ScreenfeedAdminbarTools_code execution when user input ScreenfeedAdminbarTools_is passed directly into the template.
      *         // This currently defaults to false, but will default to true in v3.0.
      *         'strict_callables' => true,
      *
@@ -135,7 +135,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *         'pragmas' => [ScreenfeedAdminbarTools_Mustache_Engine::PRAGMA_FILTERS],
      *     );
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException If `escape` option is not callable
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException If `escape` option ScreenfeedAdminbarTools_is not callable
      *
      * @param array $options (default: array())
      */
@@ -333,7 +333,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     /**
      * Set partials for the current partials Loader instance.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_RuntimeException If the current Loader instance is immutable
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_RuntimeException If the current Loader instance ScreenfeedAdminbarTools_is immutable
      *
      * @param array $partials (default: array())
      */
@@ -357,7 +357,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      * any other valid Mustache context value. They will be prepended to the context stack, so they will be available in
      * any template loaded by this Mustache instance.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if $helpers is not an array or Traversable
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException if $helpers ScreenfeedAdminbarTools_is not an array or Traversable
      *
      * @param array|Traversable $helpers
      */
@@ -369,8 +369,8 @@ class ScreenfeedAdminbarTools_Mustache_Engine
 
         $this->getHelpers()->clear();
 
-        foreach ($helpers as $name => $helper) {
-            $this->addHelper($name, $helper);
+        foreach ($helpers as $ScreenfeedAdminbarTools_name => $helper) {
+            $this->addHelper($ScreenfeedAdminbarTools_name, $helper);
         }
     }
 
@@ -395,26 +395,26 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::setHelpers
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      * @param mixed  $helper
      */
-    public function addHelper($name, $helper)
+    public function addHelper($ScreenfeedAdminbarTools_name, $helper)
     {
-        $this->getHelpers()->add($name, $helper);
+        $this->getHelpers()->add($ScreenfeedAdminbarTools_name, $helper);
     }
 
     /**
-     * Get a Mustache helper by name.
+     * Get a Mustache helper by ScreenfeedAdminbarTools_name.
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::setHelpers
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return mixed Helper
      */
-    public function getHelper($name)
+    public function getHelper($ScreenfeedAdminbarTools_name)
     {
-        return $this->getHelpers()->get($name);
+        return $this->getHelpers()->get($ScreenfeedAdminbarTools_name);
     }
 
     /**
@@ -422,31 +422,31 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::setHelpers
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
-     * @return bool True if the helper is present
+     * @return bool True if the helper ScreenfeedAdminbarTools_is present
      */
-    public function hasHelper($name)
+    public function hasHelper($ScreenfeedAdminbarTools_name)
     {
-        return $this->getHelpers()->has($name);
+        return $this->getHelpers()->has($ScreenfeedAdminbarTools_name);
     }
 
     /**
-     * Remove a helper by name.
+     * Remove a helper by ScreenfeedAdminbarTools_name.
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::setHelpers
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      */
-    public function removeHelper($name)
+    public function removeHelper($ScreenfeedAdminbarTools_name)
     {
-        $this->getHelpers()->remove($name);
+        $this->getHelpers()->remove($ScreenfeedAdminbarTools_name);
     }
 
     /**
      * Set the Mustache Logger instance.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException If logger is not an instance of ScreenfeedAdminbarTools_Mustache_Logger or Psr\Log\LoggerInterface
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException If logger ScreenfeedAdminbarTools_is not an instance of ScreenfeedAdminbarTools_Mustache_Logger or Psr\Log\LoggerInterface
      *
      * @param ScreenfeedAdminbarTools_Mustache_Logger|Psr\Log\LoggerInterface $logger
      */
@@ -584,7 +584,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     /**
      * Get the current Lambda Cache instance.
      *
-     * If 'cache_lambda_templates' is enabled, this is the default cache instance. Otherwise, it is a NoopCache.
+     * If 'cache_lambda_templates' ScreenfeedAdminbarTools_is enabled, this ScreenfeedAdminbarTools_is the default cache instance. Otherwise, it ScreenfeedAdminbarTools_is a NoopCache.
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::getCache
      *
@@ -611,13 +611,13 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *
      * @param string|ScreenfeedAdminbarTools_Mustache_Source $source
      *
-     * @return string Mustache Template class name
+     * @return string Mustache Template class ScreenfeedAdminbarTools_name
      */
     public function getTemplateClassName($source)
     {
         // For the most part, adding a new option here should do the trick.
         //
-        // Pick a value here which is unique for each possible way the template
+        // Pick a value here which ScreenfeedAdminbarTools_is unique for each possible way the template
         // could be compiled... but not necessarily unique per option value. See
         // escape below, which only needs to differentiate between 'custom' and
         // 'default' escapes.
@@ -646,28 +646,28 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     }
 
     /**
-     * Load a Mustache Template by name.
+     * Load a Mustache Template by ScreenfeedAdminbarTools_name.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return ScreenfeedAdminbarTools_Mustache_Template
      */
-    public function loadTemplate($name)
+    public function loadTemplate($ScreenfeedAdminbarTools_name)
     {
-        return $this->loadSource($this->getLoader()->load($name));
+        return $this->loadSource($this->getLoader()->ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name));
     }
 
     /**
-     * Load a Mustache partial Template by name.
+     * Load a Mustache partial Template by ScreenfeedAdminbarTools_name.
      *
-     * This is a helper method used internally by Template instances for loading partial templates. You can most likely
+     * This ScreenfeedAdminbarTools_is a helper method used internally by Template instances for loading partial templates. You can most likely
      * ignore it completely.
      *
-     * @param string $name
+     * @param string $ScreenfeedAdminbarTools_name
      *
      * @return ScreenfeedAdminbarTools_Mustache_Template
      */
-    public function loadPartial($name)
+    public function loadPartial($ScreenfeedAdminbarTools_name)
     {
         try {
             if (isset($this->partialsLoader)) {
@@ -675,16 +675,16 @@ class ScreenfeedAdminbarTools_Mustache_Engine
             } elseif (isset($this->loader) && !$this->loader instanceof ScreenfeedAdminbarTools_Mustache_Loader_StringLoader) {
                 $loader = $this->loader;
             } else {
-                throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($name);
+                throw new ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException($ScreenfeedAdminbarTools_name);
             }
 
-            return $this->loadSource($loader->load($name));
+            return $this->loadSource($loader->ScreenfeedAdminbarTools_load($ScreenfeedAdminbarTools_name));
         } catch (ScreenfeedAdminbarTools_Mustache_Exception_UnknownTemplateException $e) {
             // If the named partial cannot be found, log then return null.
             $this->log(
                 ScreenfeedAdminbarTools_Mustache_Logger::WARNING,
-                'Partial not found: "{name}"',
-                array('name' => $e->getTemplateName())
+                'Partial not found: "{ScreenfeedAdminbarTools_name}"',
+                array('ScreenfeedAdminbarTools_name' => $e->getTemplateName())
             );
         }
     }
@@ -692,7 +692,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     /**
      * Load a Mustache lambda Template by source.
      *
-     * This is a helper method used by Template instances to generate subtemplates for Lambda sections. You can most
+     * This ScreenfeedAdminbarTools_is a helper method used by Template instances to generate subtemplates for Lambda sections. You can most
      * likely ignore it completely.
      *
      * @param string $source
@@ -712,7 +712,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
     /**
      * Instantiate and return a Mustache Template instance by source.
      *
-     * Optionally provide a ScreenfeedAdminbarTools_Mustache_Cache instance. This is used internally by ScreenfeedAdminbarTools_Mustache_Engine::loadLambda to respect
+     * Optionally provide a ScreenfeedAdminbarTools_Mustache_Cache instance. This ScreenfeedAdminbarTools_is used internally by ScreenfeedAdminbarTools_Mustache_Engine::loadLambda to respect
      * the 'cache_lambda_templates' configuration option.
      *
      * @see ScreenfeedAdminbarTools_Mustache_Engine::loadTemplate
@@ -734,7 +734,7 @@ class ScreenfeedAdminbarTools_Mustache_Engine
             }
 
             if (!class_exists($className, false)) {
-                if (!$cache->load($className)) {
+                if (!$cache->ScreenfeedAdminbarTools_load($className)) {
                     $compiled = $this->compile($source);
                     $cache->cache($className, $compiled);
                 }
@@ -790,16 +790,16 @@ class ScreenfeedAdminbarTools_Mustache_Engine
      *
      * @param string|ScreenfeedAdminbarTools_Mustache_Source $source
      *
-     * @return string generated Mustache template class code
+     * @return string generated Mustache template class ScreenfeedAdminbarTools_code
      */
     private function compile($source)
     {
-        $name = $this->getTemplateClassName($source);
+        $ScreenfeedAdminbarTools_name = $this->getTemplateClassName($source);
 
         $this->log(
             ScreenfeedAdminbarTools_Mustache_Logger::INFO,
             'Compiling template to "{className}" class',
-            array('className' => $name)
+            array('className' => $ScreenfeedAdminbarTools_name)
         );
 
         if ($source instanceof ScreenfeedAdminbarTools_Mustache_Source) {
@@ -810,11 +810,11 @@ class ScreenfeedAdminbarTools_Mustache_Engine
         $compiler = $this->getCompiler();
         $compiler->setPragmas($this->getPragmas());
 
-        return $compiler->compile($source, $tree, $name, isset($this->escape), $this->charset, $this->strictCallables, $this->entityFlags);
+        return $compiler->compile($source, $tree, $ScreenfeedAdminbarTools_name, isset($this->escape), $this->charset, $this->strictCallables, $this->entityFlags);
     }
 
     /**
-     * Add a log record if logging is enabled.
+     * Add a log record if logging ScreenfeedAdminbarTools_is enabled.
      *
      * @param int    $level   The logging level
      * @param string $message The log message

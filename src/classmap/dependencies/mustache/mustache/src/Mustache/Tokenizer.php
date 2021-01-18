@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of Mustache.php.
+ * This file ScreenfeedAdminbarTools_is part of Mustache.php.
  *
  * (c) 2010-2017 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with this source ScreenfeedAdminbarTools_code.
  */
 
 /**
  * Mustache Tokenizer class.
  *
- * This class is responsible for turning raw template source into a set of Mustache tokens.
+ * This class ScreenfeedAdminbarTools_is responsible for turning raw template source into a set of Mustache tokens.
  */
 class ScreenfeedAdminbarTools_Mustache_Tokenizer
 {
@@ -55,7 +55,7 @@ class ScreenfeedAdminbarTools_Mustache_Tokenizer
 
     // Token properties
     const TYPE    = 'type';
-    const NAME    = 'name';
+    const NAME    = 'ScreenfeedAdminbarTools_name';
     const OTAG    = 'otag';
     const CTAG    = 'ctag';
     const LINE    = 'line';
@@ -85,7 +85,7 @@ class ScreenfeedAdminbarTools_Mustache_Tokenizer
      * Scan and tokenize template source.
      *
      * @throws ScreenfeedAdminbarTools_Mustache_Exception_SyntaxException when mismatched section tags are encountered
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException when $delimiters string is invalid
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException when $delimiters string ScreenfeedAdminbarTools_is invalid
      *
      * @param string $text       Mustache template source to tokenize
      * @param string $delimiters Optionally, pass initial opening and closing delimiters (default: null)
@@ -261,7 +261,7 @@ class ScreenfeedAdminbarTools_Mustache_Tokenizer
     /**
      * Change the current Mustache delimiters. Set new `otag` and `ctag` values.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_SyntaxException when delimiter string is invalid
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_SyntaxException when delimiter string ScreenfeedAdminbarTools_is invalid
      *
      * @param string $text  Mustache template source
      * @param int    $index Current tokenizer index
@@ -293,7 +293,7 @@ class ScreenfeedAdminbarTools_Mustache_Tokenizer
     /**
      * Set the current Mustache `otag` and `ctag` delimiters.
      *
-     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException when delimiter string is invalid
+     * @throws ScreenfeedAdminbarTools_Mustache_Exception_InvalidArgumentException when delimiter string ScreenfeedAdminbarTools_is invalid
      *
      * @param string $delimiters
      */
@@ -318,7 +318,7 @@ class ScreenfeedAdminbarTools_Mustache_Tokenizer
      * Add pragma token.
      *
      * Pragmas are hoisted to the front of the template, so all pragma tokens
-     * will appear at the front of the token list.
+     * will appear ScreenfeedAdminbarTools_at the front of the token list.
      *
      * @param string $text
      * @param int    $index
